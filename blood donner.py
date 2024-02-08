@@ -1,24 +1,24 @@
 #setting the repeats to true
-repeat=True
-repeatw=True
+gettingage=True
+gettingweight=True
 
 #asking for age and checking if valid
-while repeat:
+while gettingage:
     try:
         age = float(input("Please enter your age: "))
         if age > 0:
-            repeat=False
+            gettingage=False
         else:
             print("please enter a positive number")
     except ValueError :
         print("Make sure you enter a number with no letters")
     
 #asking for weight and checking if valid
-while repeatw:
+while gettingweight:
     try:
         weight = float(input("please enter your weight: "))
         if weight > 0:
-            repeatw = False
+            gettingweight = False
         else:
             print("Make sure you enter a positive number")
     except ValueError :
