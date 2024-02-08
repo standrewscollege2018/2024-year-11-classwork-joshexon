@@ -1,5 +1,2 @@
-number=input()
-number=int(number)
-double=number+number
-double=str(double)
-print(double)
+number=float(input("please enter a number:"))
+print("the answer is " + str(number*2))
