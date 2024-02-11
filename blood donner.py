@@ -1,33 +1,44 @@
-#setting the repeats to true
-gettingage=True
-gettingweight=True
+'''setting the repeats to true'''
+repeat=True
+
+
 
 #asking for age and checking if valid
-while gettingage:
+def check(a):
     try:
-        age = float(input("Please enter your age: "))
-        if age > 0:
-            gettingage=False
+        a=float(a)
+        if a>=0:
+            return False
         else:
-            print("please enter a positive number")
-    except ValueError :
-        print("Make sure you enter a number with no letters")
+            return True
     
-#asking for weight and checking if valid
-while gettingweight:
-    try:
-        weight = float(input("please enter your weight: "))
-        if weight > 0:
-            gettingweight = False
-        else:
-            print("Make sure you enter a positive number")
-    except ValueError :
-        print("Make sure you enter a number with no letters")
+    except ValueError:
+        return True
+        
 
-#checking if user is eligible and printing if they are
-if age >= 16  and weight >= 50:
-    print("You are eligible")
-else:
+
+while repeat:
+    age= (input("enter your age: "))
+    repeat = check(age)
+    if repeat==True:
+        print("Make sure you enter a positive number")
+age=float(age)
+if age<16:
     print("You are not eligible")
+else:
+    repeat=True
+    while repeat:
+        weight=(input("enter you weight: "))
+        repeat=check(weight)
+
+    weight=float(weight)
+    if weight<50:
+        print("You are not eligible")
+    else:
+        print("You are eligible")
+
+
+
     
+
 
